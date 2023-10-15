@@ -1,0 +1,96 @@
+:root{
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDream: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+    /* box-shadow: 0 2px 8px 2px rgba(178,178,178,0.45); */
+}
+
+.blog {
+    .mainContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .singlePost {
+            border-radius: 1rem;
+            overflow: hidden;
+            padding: 2rem;
+            box-shadow: 0 2px 8px 2px rgba(178,178,178,0.45);
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0.5rem;
+
+            .icon, small {
+                flex-grow: 1;
+            }
+
+            .imgDiv {
+                position: relative;
+                height: 200px;
+                width: 100%;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                &:hover img {
+                    transform: scale(1, 1);
+                    transition: 2s ease;
+                }
+            }
+
+            .postDetails {
+                padding: 1rem;
+
+                h3 {
+                    color: var(--blackColor);
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    font-size: 13px;
+                    color: var(--textColor);
+                    font-weight: 500;
+                }
+            }
+
+            a {
+                font-size: 15px;
+                color: var(--PrimaryColor);
+                font-weight: 600;
+                padding-top: .5rem;
+                width: max-content;
+
+                .icon {
+                    transform: translateX(10px);
+                }
+
+                &:hover {
+                    color: var(--HoverColor);
+                    font-weight: 600;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            .singlePost {
+                flex-basis: calc(33.33% - 1rem);
+            }
+        }
+    }
+}
+
+
+
